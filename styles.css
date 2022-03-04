@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Montserrat:wght@400;700&family=Raleway:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #F5614D;
+    --gray-color: #aaaaaa;
+    --primary-font: Montserrat, sans-serif;
+    --secondary-font: Raleway, serif;
+    --little-gap: 16px;
+    --medium-gap: 32px;
+    --large-gap: 64px;
+    --transition-duration: 0.2s;
+}
+
+html {
+    font-size: 16px;
+    transition: font-size var(--transition-duration);
+}
+
+body {
+    margin: 0;
+    font-family: var(--primary-font);
+}
+
+
+#whats-new {
+    text-align: center;
+    margin: var(--large-gap) var(--little-gap);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: var(--little-gap);
+}
+
+p {
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+    color: var(--gray-color);
+    margin-top: 0;
+    margin-bottom: var(--large-gap);
+}
+
+hr {
+    color: var(--gray-color);
+    width: 45px;
+    margin-top: 0;
+    margin-bottom: var(--large-gap);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: var(--medium-gap);
+    row-gap: var(--little-gap);
+}
+
+button {
+    background-color: white;
+    color: var(--gray-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 1px solid var(--gray-color);
+    padding: 0 16px;
+    height: 44px;
+    border-radius: 22px;
+    transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration);
+}
+
+.active, button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: transparent;
+}
+
+.active:hover {
+    background-color: white;
+    color: var(--gray-color);
+    border-color: var(--gray-color);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
